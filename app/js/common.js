@@ -5,6 +5,8 @@ $(document).ready(function(){
 
         $('.main-mnu li').addClass('animate__animated').toggle();
 
+        $('.s-index').toggleClass('opened')
+
         if(!wrap.hasClass('closed') && !wrap.hasClass('opened')) {
             wrap.addClass('opened');
         } else {
@@ -17,13 +19,10 @@ $(document).ready(function(){
         $item.each(function(){
             $(this).css("animation-delay", $firstDelay + "s");
             $firstDelay += $timeoutDelay;
-
         });
     }
 
     animateTypicItems($('.main-mnu-mobile li'), 0.5, 0.1);
-
-
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change

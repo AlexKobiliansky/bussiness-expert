@@ -78,11 +78,76 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+  .s-index
+    min-height: 800px
 
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-index
+    min-height: 100vh
+    height: 1px
+    &.opened
+      height: 700px
+      .index-text
+        transition-delay: 0s
 
+  .index-wrap.opened
+    .glimming-img
+      left: calc(50% - (50vw - 30px))
+      top: -50px
+    .btn-medal-wrap
+      //top: 50px
+
+  .main-mnu-mobile
+    font-size: 24px
+    margin-top: 185px
+    li
+      margin-bottom: 15px
+
+
+
+  .index-text
+    font-size: 60px
+    transition-delay: .9s
+    &-before
+      top: -70px
+    &-after
+      bottom: -26px
+
+  .btn-medal-wrap
+    transition-delay: .6s
+    margin-bottom: 221px
+
+  .index-wrap
+    height: calc(100% - 221px)
+
+  .coin
+    width: 180px
+    height: 180px
+
+  .coin__back, .coin__front
+    width: 180px
+    height: 180px
+
+  .coin__edge
+    @for $i from 1 through $edge-faces
+      div:nth-child(#{$i})
+        position: absolute
+        height: calc(3.14 * 180px / 80)
+        width: $coin-thickness
+        background: $accent-blue
+        transform: translateY(#{180/2-(3.14 * 180px / 80)/2}) translateX(#{180px/2-$coin-thickness/2}) rotateZ(360deg/$edge-faces*$i+90) translateX(90px) rotateY(90deg)
+
+
+  .main-head
+    flex-wrap: wrap
+    justify-content: center
+
+  .site-info
+    width: 100%
+    margin-bottom: 25px
+    justify-content: center
 /*==========  Mobile First  ==========*/
 
 // ≤480px
