@@ -1,0 +1,237 @@
+.s-index
+  min-height: 400px
+  height: 100vh
+  position: relative
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+  &:before
+    height: 100%
+    +bg-cover
+    opacity: .12
+    background-image: url('../img/bg-index.jpg')
+  &:after
+    height: 535px
+    background-image: linear-gradient(rgba(#fff, .7) 0, rgba(#fff, .7) 30%,transparent 100%)
+  .container
+    position: relative
+    z-index: 2
+    height: 100%
+  .description
+    font-size: 18px
+    padding-left: 15px
+  .btn-blue
+    width: 210px
+
+.index-wrap
+  height: calc(100% - 148px)
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+
+.btn-medal-wrap
+  position: relative
+  margin-bottom: 148px
+
+.glimming-img
+  position: absolute
+  left: 50%
+  top: 50%
+  width: 0
+  height: 0
+  +mt(.9s)
+
+.main-mnu
+  position: absolute
+  left: 50%
+  top: 50%
+  width: 0
+  height: 0
+  a
+    font-size: 26px
+    font-weight: 700
+    text-transform: uppercase
+    color: #000
+    opacity: .7
+    line-height: 1
+    white-space: nowrap
+    &:hover
+      color: $accent-blue
+  li
+    position: absolute
+    display: none
+    font-family: "Roboto", sans-serif
+    &:nth-child(1)
+      left: -260px
+      top: -188px
+    &:nth-child(2)
+      left: -370px
+      top: -8px
+    &:nth-child(3)
+      left: -400px
+      top: 183px
+    &:nth-child(4)
+      left: 145px
+      top: -188px
+    &:nth-child(5)
+      left: 196px
+      top: -8px
+    &:nth-child(6)
+      left: 145px
+      top: 183px
+
+.index-text
+  display: inline-block
+  line-height: 1
+  +ls
+  font-weight: 700
+  font-size: 110px
+  text-transform: uppercase
+  position: absolute
+  top: 65px
+  transition: opacity .5s linear
+  &-before
+    left: -410px
+  &-after
+    right: -455px
+
+
+.index-wrap.opened
+  .coin
+    animation-name: rotate3d
+  .glimming-img
+    width: 970px
+    height: 723px
+    left: calc(50% - 493px)
+    top: calc(50% - 361.5px)
+  .index-text
+    opacity: 0
+
+.index-wrap.closed
+  .coin
+    animation-name: unrotate3d
+
+$coin-diameter: 235px
+$coin-thickness: 10px
+$coin-color: #E8D0BB
+$coin-front: "../img/medal-1.png"
+$coin-back: "../img/medal-2.png"
+$edge-faces: 80
+$edge-face-length: 3.14*$coin-diameter/$edge-faces
+$turn-time: .5s
+
+.coin
+  position: relative
+  width: $coin-diameter
+  height: $coin-diameter
+  transform-style: preserve-3d
+  //animation: rotate3d $turn-time linear
+  animation-duration: $turn-time
+  animation-iteration-count: 1
+  animation-timing-function: linear
+  transition: all .3s
+  animation-fill-mode: forwards
+  cursor: pointer
+
+
+.coin__front, .coin__back
+  position: absolute
+  width: $coin-diameter
+  height: $coin-diameter
+  border-radius: 50%
+  overflow: hidden
+  background-color: $accent-blue
+  &:after
+    content: ""
+    position: absolute
+    left: -$coin-diameter/2
+    bottom: 100%
+    display: block
+    height: $coin-diameter/1.5
+    width: $coin-diameter*2
+    background: #fff
+    opacity: 0.3
+    animation: shine linear 10s infinite
+
+
+
+.coin__front
+  background-image: url($coin-front)
+  background-size: cover
+  transform: translateZ($coin-thickness/2)
+
+.coin__back
+  background-image: url($coin-back)
+  background-size: cover
+  transform: translateZ(-$coin-thickness/2) rotateY(180deg)
+
+
+.coin__edge
+  @for $i from 1 through $edge-faces
+    div:nth-child(#{$i})
+      position: absolute
+      height: $edge-face-length
+      width: $coin-thickness
+      background: $accent-blue
+      transform: translateY(#{$coin-diameter/2-$edge-face-length/2}) translateX(#{$coin-diameter/2-$coin-thickness/2}) rotateZ(360deg/$edge-faces*$i+90) translateX(#{$coin-diameter/2}) rotateY(90deg)
+
+
+@keyframes rotate3d
+  0%
+    transform: perspective(1000px) rotateY(0deg)
+  100%
+    transform: perspective(1000px) rotateY(-180deg)
+
+@keyframes unrotate3d
+  0%
+    transform: perspective(1000px) rotateY(-180deg)
+  100%
+    transform: perspective(1000px) rotateY(0deg)
+
+@keyframes shine
+  0%, 40%
+    transform: translateY($coin-diameter*2) rotate(-40deg)
+  50%
+    transform: translateY(-$coin-diameter) rotate(-40deg)
+
+
+
+
+.main-mnu-mobile
+  width: 100%
+  text-align: center
+  font-size: 34px
+  line-height: 1
+  font-weight: 700
+  position: relative
+  z-index: 3
+  margin-top: 200px
+  display: none
+  opacity: 0
+  a
+    display: inline-block
+    color: rgba(#000, .6)
+    text-transform: uppercase
+    +ls
+  li
+    margin-bottom: 18px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

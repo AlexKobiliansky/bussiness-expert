@@ -5,9 +5,76 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .index-text
+    font-size: 90px
+    top: 69px
+    &-before
+      left: -345px
+    &-after
+      right: -382px
+
+  .main-mnu
+    a
+      font-size: 24px
+    li
+      &:nth-child(1)
+        left: -254px
+      &:nth-child(2)
+        left: -355px
+      &:nth-child(3)
+        left: -382px
+
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .btn-medal-wrap
+    width: 100%
+
+  .coin
+    margin: 0 auto
+
+  .s-index
+    overflow: hidden
+
+  .index-text
+    width: 100%
+    text-align: center
+    +mt(.5s)
+    &-before
+      left: 0
+      top: -100px
+    &-after
+      left: 0
+      bottom: -110px
+      top: auto
+      right: auto
+
+  .main-mnu
+    display: none!important
+
+  .btn-medal-wrap
+    height: 236px
+    position: absolute
+    left: 0
+    top: calc(50% - 118px)
+    +mt(.5s)
+
+  .index-wrap.opened
+    .glimming-img
+      width: 90%
+      height: auto
+      left: calc(50% - 310px)
+      top: calc(50% - 229px)
+    .btn-medal-wrap
+      top: 0
+    .index-text-before
+      top: 0
+    .index-text-after
+      bottom: 0
+    .main-mnu-mobile
+      display: block
+      opacity: 1
 
 // ≥768px
 +media-breakpoint-down(sm)

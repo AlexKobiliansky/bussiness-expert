@@ -1,0 +1,23 @@
+.main-head
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 23px 0 32px
+  position: relative
+  z-index: 3
+
+.site-info
+  display: inline-flex
+  align-items: center
+  .logo
+    display: inline-block
+    position: relative
+    padding-right: 15px
+    &:after
+      content: ''
+      position: absolute
+      width: 2px
+      height: 58px
+      background-color: #000
+      right: 0
+      top: calc(50% - 29px)
