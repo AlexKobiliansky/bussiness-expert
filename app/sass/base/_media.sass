@@ -5,6 +5,22 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+
+  .detservice-item
+    padding: 35px
+    .svg
+      width: 40px
+    span
+      width: calc(100% - 60px)
+
+  .s-intro
+    min-height: auto
+    height: 800px
+
+  .page-title
+    font-size: 80px
+
   .index-text
     font-size: 90px
     top: 69px
@@ -27,6 +43,22 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .detservice-item
+    flex-direction: column
+    justify-content: center
+    padding: 20px
+    .svg
+      margin-bottom: 15px
+    span
+      width: 100%
+      text-align: center
+
+  .s-intro
+    height: 700px
+
+  .page-title
+    font-size: 68px
 
   .btn-medal-wrap
     width: 100%
@@ -78,11 +110,57 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .detservice-item
+    flex-direction: row
+    padding: 35px 50px
+    margin-bottom: 20px
+    justify-content: space-between
+    height: auto
+    font-size: 24px
+    .svg
+      width: 56px
+      margin-bottom: 0
+    span
+      width: calc(100% - 96px)
+      text-align: left
+
+  .s-det-services
+    padding: 50px 0 30px
+    .row
+      top: 0
+
+  .s-intro
+    height: 500px
+
+  .page-title
+    font-size: 50px
+
+  .breadcrumbs
+    font-size: 16px
+
   .s-index
     min-height: 800px
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .breadcrumbs
+    padding: 0 0 40px
+
+  .page-title
+    font-size: 40px
+
+  .s-intro
+    height: 600px
+
+  .detservice-item
+    font-size: 18px
+    padding: 30px
+    .svg
+      width: 46px
+    span
+      width: calc(100% - 76px)
 
   .s-index
     min-height: 100vh
@@ -148,6 +226,22 @@
     width: 100%
     margin-bottom: 25px
     justify-content: center
+
+@media (max-width: 390px)
+
+  .s-det-services
+    padding: 40px 0 20px
+
+  .detservice-item
+    padding-left: 25px
+    padding-right: 25px
+    font-size: 16px
+    .svg
+      width: 40px
+    span
+      width: calc(100% - 70px)
+
+
 /*==========  Mobile First  ==========*/
 
 // ≤480px
