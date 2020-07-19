@@ -24,6 +24,11 @@ $(document).ready(function(){
 
     animateTypicItems($('.main-mnu-mobile li'), 0.5, 0.1);
 
+
+    $('.s-intro').parallax({
+        bleed: '50',
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
