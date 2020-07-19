@@ -1,0 +1,70 @@
+.s-reviews
+  padding: 40px 0 155px
+
+.review-item
+  &-name
+    font-size: 21px
+    line-height: 1.15
+    font-weight: 700
+    margin-bottom: 10px
+  &-post
+    font-size: 14px
+    opacity: .7
+    line-height: 1
+    margin-bottom: 22px
+  &-desc
+    position: relative
+    background-color: #f1f1f1
+    padding: 30px
+    border-radius: 10px
+    &:before
+      content: ''
+      position: absolute
+      border: 10px solid transparent
+      border-bottom: 12px solid #f1f1f1
+      top: -20px
+      left: 50px
+
+.reviews-slider
+  position: relative
+  .owl-dots
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: -59px
+    text-align: center
+  button.owl-dot
+    display: inline-block
+    +mt(.3s)
+    cursor: pointer
+    margin: 0 6px
+    width: 32px
+    height: 5px
+    border-radius: 2px
+    background-color: #daeefa
+    &.active
+      background-color: $accent-dark
+  .owl-nav
+    width: 100%
+    position: absolute
+    left: 0
+    bottom: -47px
+    z-index: 2
+    button.owl-prev, button.owl-next
+      width: 20px
+      height: 20px
+      background-image: url('../img/icons/slider-arrow-blue.svg')
+      +bg-cover
+      cursor: pointer
+      +mt(.3s)
+      top: calc(50% - 10px)
+      position: absolute
+      &:hover
+        background-image: url('../img/icons/slider-arrow-darkblue.svg')
+    button.owl-prev
+      left: calc(50% - 120px)
+    button.owl-next
+      right: calc(50% - 120px)
+      transform: rotate(180deg)
+
+

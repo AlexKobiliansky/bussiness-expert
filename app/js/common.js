@@ -32,6 +32,48 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    $('.reviews-slider').owlCarousel({
+        loop: true,
+        nav: true,
+        margin: 30,
+        dots: true,
+        navText: ["",""],
+        responsive : {
+            0 : {
+                slideBy: 1,
+                items: 1,
+                autoHeight: true,
+                nav: false,
+            },
+            768 : {
+                slideBy: 2,
+                items: 2,
+                autoHeight: false,
+                margin: 20,
+            },
+            992: {
+                slideBy: 3,
+                items: 3,
+                autoHeight: false,
+                margin: 30,
+            }
+        }
+    });
+
+    function heightses() {
+
+        if ($(window).width()>=768) {
+
+            $('.review-item-desc').height('auto').equalHeights();
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
     $('.coin').on('click', function(){
         var wrap = $('.index-wrap');
 

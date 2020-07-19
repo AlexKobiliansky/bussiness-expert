@@ -51,6 +51,16 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-reviews
+    padding-bottom: 100px
+
+  .reviews-slider
+    .owl-nav
+      button.owl-prev
+        left: calc(50% - 150px)
+      button.owl-next
+        right: calc(50% - 150px)
+
   .section-title
     margin-bottom: 30px
 
@@ -157,6 +167,13 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .reviews-slider
+    .owl-dots
+      bottom: -47px
+    button.owl-dot
+      width: 20px
+      margin: 0 4px
 
   .detadv-item
     &-title
