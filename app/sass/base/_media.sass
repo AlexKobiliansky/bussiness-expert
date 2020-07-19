@@ -6,6 +6,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-det-advantages
+    .section-title
+      padding-right: 0
+
+  .detadv-item
+    &-img
+      height: 220px
 
   .detservice-item
     padding: 35px
@@ -43,6 +50,9 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .section-title
+    margin-bottom: 30px
 
   .detservice-item
     flex-direction: column
@@ -111,6 +121,9 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .section-title
+    font-size: 24px
+
   .detservice-item
     flex-direction: row
     padding: 35px 50px
@@ -144,6 +157,10 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .detadv-item
+    &-title
+      font-size: 20px
 
   .breadcrumbs
     padding: 0 0 40px
@@ -228,6 +245,13 @@
     justify-content: center
 
 @media (max-width: 390px)
+
+  .section-title
+    font-size: 20px
+
+  .detadv-item
+    &-img
+      height: 180px
 
   .s-det-services
     padding: 40px 0 20px
