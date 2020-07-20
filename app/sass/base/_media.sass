@@ -6,6 +6,18 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-nums
+    padding-bottom: 20px
+    .section-title
+      text-align: center
+
+  .nums-wrap
+    flex-wrap: wrap
+
+  .num-item
+    width: 50%
+    margin-bottom: 50px
+
   .foot-line
     padding: 35px 0 20px
     .btn-blue
@@ -213,6 +225,17 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .num-item
+    margin-bottom: 40px
+    padding: 0 10px
+    &-num
+      font-size: 36px
+      width: 140px
+      height: 140px
+      line-height: 140px
+    &-desc
+      font-size: 14px
+
   .law-services-content
     top: -100px
 
@@ -354,6 +377,14 @@
     justify-content: center
 
 @media (max-width: 390px)
+
+  .s-nums
+    padding: 50px 0 20px
+
+  .num-item
+    width: 100%
+    &-title
+      font-size: 16px
 
   .popup-form
     padding-left: 15px

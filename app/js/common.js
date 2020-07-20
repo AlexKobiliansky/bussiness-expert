@@ -177,6 +177,25 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
+
+
+    var waypoints = $('.nums-wrap').waypoint(function(direction) {
+        $('.num-item-num span').each(function(){
+            var $val = $(this).data("value");
+            $(this).animateNumber(
+                {
+                    number: $val,
+                },
+                1600
+            );
+        });
+        this.destroy();
+    }, {
+        offset: '85%'
+    });
+
+
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
