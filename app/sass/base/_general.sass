@@ -272,3 +272,36 @@ form
   color: #fff
 
 
+
+
+.jq-checkbox
+  width: 27px
+  height: 27px
+  border-radius: 10px
+  box-shadow: none
+  background: transparent
+  input
+    position: absolute
+    width: 1px
+    height: 1px
+    top: 50%
+
+
+.jq-checkbox.checked .jq-checkbox__div
+  width: 18px
+  height: 10px
+  margin: 5px 0 0 3px
+  border-width: 3px
+
+.label-checkbox
+  display: flex
+  justify-content: space-between
+  align-items: center
+  span
+    font-size: 18px
+    width: calc(100% - 40px)
+    cursor: pointer
+    line-height: 1
+    position: relative
+    top: 1px
+

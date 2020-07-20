@@ -160,6 +160,23 @@ $(document).ready(function(){
     }
 
     animateTypicItems($('.main-mnu-mobile li'), 0.5, 0.1);
+
+    var waypoints = $('.nums-wrap').waypoint(function(direction) {
+        $('.num-item-num span').each(function(){
+            var $val = $(this).data("value");
+            $(this).animateNumber(
+                {
+                    number: $val,
+                },
+                1600
+            );
+        });
+        this.destroy();
+    }, {
+        offset: '85%'
+    });
+
+
     /**
      * FORMS
      */
@@ -177,22 +194,11 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
+    $('input[type="checkbox"]').styler();
 
 
-    var waypoints = $('.nums-wrap').waypoint(function(direction) {
-        $('.num-item-num span').each(function(){
-            var $val = $(this).data("value");
-            $(this).animateNumber(
-                {
-                    number: $val,
-                },
-                1600
-            );
-        });
-        this.destroy();
-    }, {
-        offset: '85%'
-    });
+
+
 
 
 

@@ -1,0 +1,47 @@
+@import ../base/vars
+
+
+.s-consult
+  display: flex
+  justify-content: space-between
+  background-color: $accent-blue
+  color: #fff
+  &>div
+    width: 50%
+
+
+.consult-img
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.consult-content
+  padding: 65px 0 65px 92px
+  .section-title
+    color: #fff
+    width: calc(1140px / 2)
+    margin-bottom: 30px
+
+.consult-form
+  width: calc(1140px / 2)
+  .form-labels-wrap
+    width: 260px
+    margin-bottom: 55px
+  input
+    background-color: transparent
+    border-color: #fff
+    color: #fff
+    &::placeholder
+      color: rgba(#fff, .8)
+  label
+    margin-bottom: 15px
+  .jq-checkbox
+    border-color: #fff!important
+  .jq-checkbox.checked .jq-checkbox__div
+    border-color: #fff
+  .label-checkbox
+    margin-bottom: 40px
+  .btn-white
+    width: 210px
+    box-shadow: 0 0 20px 8px rgba(#000, .1)
