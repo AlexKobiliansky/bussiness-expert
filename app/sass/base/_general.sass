@@ -73,6 +73,8 @@ ul
   cursor: pointer
   border-radius: 10px
   padding: 16px 20px 14px
+  border: none
+  box-shadow: none
 
 .btn-blue
   background-color: $accent-blue
@@ -83,6 +85,16 @@ ul
   &:hover
     background-color: darken($accent-blue, 12%)
     color: #fff
+
+.btn-white
+  background-color: #fff
+  color: #0c0c0c
+  &:focus, &:active
+    background-color: #fff
+    color: #0c0c0c
+  &:hover
+    background-color: darken(#fff, 12%)
+
 
 .breadcrumbs
   font-size: 18px
@@ -118,4 +130,22 @@ ul
   margin-bottom: 55px
   span
     font-weight: normal
+
+form
+  label
+    display: block
+  input
+    font-size: 18px
+    width: 100%
+    line-height: 1
+    border-radius: 10px
+    padding: 14px 25px 12px
+    &.error
+      color: red!important
+      border-color: red!important
+      &::placeholder
+        color: red!important
+  .help-block
+    display: none!important
+
 
