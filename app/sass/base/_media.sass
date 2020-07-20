@@ -6,6 +6,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  table thead tr
+    font-size: 18px
+
+  .cost-content
+    width: calc(930px / 2)
+
   .adv-item
     &-img
       position: relative
@@ -97,6 +103,22 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-cost
+    flex-direction: column-reverse
+    box-shadow: none
+    &>div
+      width: 100%
+
+
+  .cost-content
+    width: 100%
+    &-left
+      padding-left: 50px
+      padding-right: 50px
+    &-right
+      padding-left: 50px
+      padding-right: 50px
 
   .s-advantages
     padding-bottom: 20px
@@ -347,6 +369,31 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-cost
+    &>div
+      padding-top: 40px
+      padding-bottom: 40px
+
+  .cost-content
+    &-left
+      padding-left: 15px
+      padding-right: 15px
+    &-right
+      padding-left: 15px
+      padding-right: 15px
+      .section-title
+        margin-bottom: 30px
+    &-desc
+      font-size: 16px
+      margin-bottom: 40px
+
+  table
+    td
+      &:nth-child(1)
+        padding-left: 10px
+      &:nth-child(2)
+        padding-right: 10px
+
   .s-advantages
     padding-top: 50px
 
@@ -527,6 +574,15 @@
     justify-content: center
 
 @media (max-width: 390px)
+
+  table
+    thead
+      tr
+        font-size: 16px
+    tbody
+      tr
+        font-size: 14px
+
 
   .adv-item
     width: calc(50% - 10px)
