@@ -6,6 +6,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .adv-item
+    &-img
+      position: relative
+
   .booker-content
     width: 880px
 
@@ -93,6 +97,24 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-advantages
+    padding-bottom: 20px
+
+  .advantages-wrap
+    flex-wrap: wrap
+    justify-content: flex-start
+
+  .adv-item
+    width: calc(25% - 30px)
+    margin-right: 40px
+    margin-bottom: 30px
+    &:after
+      right: -32px
+    &:nth-child(4n)
+      margin-right: 0
+      &:after
+        display: none
 
   .booker-content
     width: 100%
@@ -247,6 +269,18 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .adv-item
+    width: calc(25% - 15px)
+    margin-right: 20px
+    &-img
+      width: 100%
+    &:after
+      display: none
+    &-title
+      font-size: 14px
+
+
+
   .s-booker
     margin-bottom: -100px
 
@@ -312,6 +346,15 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-advantages
+    padding-top: 50px
+
+  .adv-item
+    width: calc(33% - 10px)
+    margin-right: 0
+  .advantages-wrap
+    justify-content: space-between
 
   .s-confidence
     padding: 50px 0 20px
@@ -484,6 +527,9 @@
     justify-content: center
 
 @media (max-width: 390px)
+
+  .adv-item
+    width: calc(50% - 10px)
 
   .booker-content
     padding-left: 15px
