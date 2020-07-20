@@ -131,6 +131,26 @@ $(document).ready(function(){
         }
     })
 
+    $('.s-intro').parallax({
+        bleed: '50',
+    });
+
+    $('.preloader').fadeOut();
+
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
     /** animations start */
     function animateTypicItems($item, $firstDelay, $timeoutDelay){
         $item.each(function(){
@@ -140,13 +160,6 @@ $(document).ready(function(){
     }
 
     animateTypicItems($('.main-mnu-mobile li'), 0.5, 0.1);
-
-
-    $('.s-intro').parallax({
-        bleed: '50',
-    });
-
-
     /**
      * FORMS
      */
