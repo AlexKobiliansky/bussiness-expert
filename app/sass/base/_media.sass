@@ -104,6 +104,12 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .partners-wrap
+    margin-top: 50px
+
+  .s-partners
+    text-align: center
+
   .step-item
     &-img
       width: 200px
@@ -403,6 +409,19 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .partners-wrap
+    justify-content: space-between
+
+  .partner-item
+    margin-right: 0
+    width: calc(50% - 15px)
+
+  .partners-desc
+    font-size: 24px
+    margin-bottom: 20px
+    span
+      font-size: 28px
+
   .step-item
     margin-left: 40px
     margin-right: 40px
@@ -621,6 +640,15 @@
     justify-content: center
 
 @media (max-width: 390px)
+
+  .partners-desc
+    font-size: 20px
+    span
+      font-size: 22px
+
+  .s-partners
+    padding-top: 40px
+    padding-bottom: 0
 
   .step-item
     margin-left: 0
