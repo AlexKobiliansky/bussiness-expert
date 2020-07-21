@@ -6,6 +6,11 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-confidence-about
+    padding: 40px 0 30px
+    .section-title
+      margin-bottom: 20px
+
   table thead tr
     font-size: 18px
 
@@ -103,6 +108,23 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-confidence.s-confidence-about
+    padding: 40px 0 0
+
+  .s-intro-about
+    background-image: none!important
+    background-color: #e9f3ff
+    padding-bottom: 40px
+    .nums-wrap
+      width: 100%
+    .section-title
+      text-align: center
+      margin-bottom: 50px
+    .page-desc
+      margin-bottom: 50px
+    .page-title
+      margin-bottom: 30px
 
   .s-lizing
     padding: 40px 0
@@ -418,6 +440,11 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-intro-about
+    padding-bottom: 0
+    .page-desc
+      line-height: 1.5
+
   .partners-wrap
     justify-content: space-between
 
@@ -649,6 +676,10 @@
     justify-content: center
 
 @media (max-width: 390px)
+
+  .s-intro-about
+    .num-item
+      width: 100%
 
   .partners-desc
     font-size: 20px
