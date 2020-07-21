@@ -199,13 +199,19 @@ $(document).ready(function(){
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });

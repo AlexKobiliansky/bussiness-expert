@@ -447,6 +447,10 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-contacts
+    &:before
+      height: 207px
+
   .s-intro-about
     padding-bottom: 0
     .page-desc
@@ -619,9 +623,9 @@
 
   .s-index
     min-height: 100vh
-    height: 1px
+    height: 750px
     &.opened
-      height: 700px
+      height: 750px
       .index-text
         transition-delay: 0s
 
@@ -653,7 +657,7 @@
     margin-bottom: 221px
 
   .index-wrap
-    height: calc(100% - 221px)
+    height: calc(100% - 282px)
 
   .coin
     width: 180px
@@ -682,7 +686,13 @@
     margin-bottom: 25px
     justify-content: center
 
+  .btn-medal-wrap
+
 @media (max-width: 390px)
+
+  .s-contacts
+    &:before
+      height: 267px
 
   .s-intro-about
     .num-item
@@ -756,6 +766,57 @@
       width: 40px
     span
       width: calc(100% - 70px)
+
+  .s-index.opened
+    height: 750px
+
+  .main-mnu-mobile
+    margin-bottom: 25px
+
+  .site-info
+    flex-direction: column
+    .logo
+      padding-right: 0
+      margin-bottom: 30px
+      &:after
+        height: 2px
+        width: 58px
+        bottom: -19px
+        top: auto
+        right: calc(50% - 29px)
+
+@media (max-width: 339px)
+
+
+  //.btn-medal-wrap
+  //  height: 150px
+  //  top: calc(50% - 96px)
+  //
+  //.index-text
+  //  font-size: 50px
+  //  &-before
+  //    top: -55px
+  //  &-after
+  //    bottom: -62px
+  //
+  //
+  //
+  //.coin
+  //  width: 150px
+  //  height: 150px
+  //.coin__back, .coin__front
+  //  width: 150px
+  //  height: 150px
+  //
+  //.coin__edge
+  //  @for $i from 1 through $edge-faces
+  //    div:nth-child(#{$i})
+  //      position: absolute
+  //      height: calc(3.14 * 150px / 80)
+  //      width: $coin-thickness
+  //      background: $accent-blue
+  //      transform: translateY(#{150/2-(3.14 * 150px / 80)/2}) translateX(#{150px/2-$coin-thickness/2}) rotateZ(360deg/$edge-faces*$i+90) translateX(75px) rotateY(90deg)
+
 
 
 /*==========  Mobile First  ==========*/
