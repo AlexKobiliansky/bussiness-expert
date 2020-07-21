@@ -104,6 +104,27 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .step-item
+    &-img
+      width: 200px
+      img
+        width: 80%
+        bottom: -5px
+      &:after
+        font-size: 140px
+        bottom: -40px
+    &-label
+      font-size: 24px
+      top: 18px
+      left: 18px
+    &-content
+      width: calc(100% - 200px)
+    &-title
+      font-size: 18px
+      margin-bottom: 10px
+    &-desc
+      margin-bottom: 20px
+
   .s-cost
     flex-direction: column-reverse
     box-shadow: none
@@ -291,6 +312,19 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .step-item
+    flex-direction: column
+    &-img
+      width: 100%
+      overflow: hidden
+      img
+        width: auto
+        max-width: 80%
+    &-content
+      width: 100%
+    &-label
+      left: 30px
+
   .adv-item
     width: calc(25% - 15px)
     margin-right: 20px
@@ -368,6 +402,19 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .step-item
+    margin-left: 40px
+    margin-right: 40px
+    &-img
+      img
+        bottom: -20px
+        max-width: none
+    &-content
+      padding-left: 15px
+      padding-right: 15px
+    &-title
+      font-size: 16px
 
   .s-cost
     &>div
@@ -574,6 +621,10 @@
     justify-content: center
 
 @media (max-width: 390px)
+
+  .step-item
+    margin-left: 0
+    margin-right: 0
 
   table
     thead
